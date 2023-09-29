@@ -27,12 +27,18 @@ function App() {
 
   return (
     <div>
+      <h2>To Do</h2>
       {userInfo.map((userInfo, index) => {
         return (
           <div key={index}>
-            <p>
-              {userInfo.userId} {userInfo.id} {userInfo.title}
-            </p>
+            <div>
+              <span style={{ color: "red" }}>UserId:</span> {userInfo.userId}{" "}
+              <span style={{ color: "red" }}>Id:</span> {userInfo.id}
+              <span style={{ color: "red" }}> UserTitle:</span>
+              {userInfo.title}{" "}
+              <span style={{ color: "red" }}> Completed: </span>
+              {userInfo.completed ? "true" : "false"}
+            </div>
           </div>
         );
       })}
